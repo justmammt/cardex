@@ -106,24 +106,26 @@ img {
     padding-right: 5vw;
 }
 
-.carousel-inner {
+.carousel {
     padding-left: 5vw;
     padding-right: 5vw;
 
 }
 
 .px-wide-300 {
-    width: 600px;
+    width: 80vw;
 }
 
 .carousel {
     margin: auto;
 }
 
-@media screen and (width: 512px) {
 
-
-    .carousel-item img {
-        width: 50%
-    }
+.carousel-item img {
+    width: 50%
 }
+
+
+.carousel-inner img {
+    margin: auto;
+  }
