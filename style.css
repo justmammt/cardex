@@ -11,6 +11,12 @@
     src: local('Futura Std');
 }
 
+* {
+    user-select: auto;
+    pointer-events: auto;
+
+}
+
 .car-logo-list {
     margin: auto;
     text-align: center;
