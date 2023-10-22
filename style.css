@@ -1,0 +1,116 @@
+@import 'dist/style.css';
+
+@font-face {
+    font-family: Futura;
+    src: local('Futura Std');
+}
+
+.car-logo-list {
+    margin: auto;
+    text-align: center;
+}
+
+.car-logo-list i {
+    font-size: 2rem;
+}
+
+.bg-color {
+    background-color: rgb(12, 72, 126);
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient(82deg, #9ac4e4, #7b59ff);
+    -webkit-background-clip: text;
+    -webkit-background-size: 400% 400%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 14vw;
+    font-family: Futura;
+    -webkit-animation: AnimationName 5s ease infinite;
+    -moz-animation: AnimationName 5s ease infinite;
+    -o-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-o-keyframes AnimationName {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+.tales {
+    padding-left: 13vw;
+    padding-right: 13vw;
+}
+
+.carousel-inner {
+    padding-left: 13vw;
+    padding-right: 13vw;
+    margin: auto;
+
+}
+
+.px-wide-300 {
+    width: 500px;
+}
+
+.carousel {
+    margin: auto;
+}
