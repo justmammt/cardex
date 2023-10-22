@@ -15,6 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/logo/cardex-logo-png.png">
 </head>
 
 <body class="bg-color">
@@ -124,6 +125,101 @@
           <span class="sr-only">Next</span>
         </button>-->
     </div>
+
+    <div class="timeline-root">
+        <section class="section intro">
+
+        </section>
+
+        <section class="timeline">
+            <div class="info">
+                <img width="50" height="50" src="https://assets.codepen.io/210284/face.svg" alt="" />
+                <h2>Company History</h2>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                <p>
+                    <a href="">Learn more &gt;</a>
+                </p>
+            </div>
+
+            <ol>
+                <li>
+                    <div>
+                        <time>1934</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                        praesentium At vero eos et accusamus et iusto odio dignissimos.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>1937</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse
+                        finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>1940</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at
+                        pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>1943</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse
+                        varius volutpat mattis. Vestibulum id magna est.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>1946</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse
+                        varius volutpat mattis. Vestibulum id magna est.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>1956</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse
+                        varius volutpat mattis. Vestibulum id magna est.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>1957</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse
+                        varius volutpat mattis. Vestibulum id magna est.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>1967</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget
+                        porta faucibus, euismod quis ante.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>1977</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a
+                        tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>1985</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse
+                        varius volutpat mattis. Vestibulum id magna est.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2000</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse
+                        varius volutpat mattis. Vestibulum id magna est.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2005</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse
+                        varius volutpat mattis. Vestibulum id magna est.
+                    </div>
+                </li>
+                <li></li>
+            </ol>
+
+        </section>
+    </div>
+
     <script>
         // Burger menus
         document.addEventListener('DOMContentLoaded', function () {
@@ -172,6 +268,33 @@
                 return false;
             }
         }
+    </script>
+    <script>
+        const elH = document.querySelectorAll(".timeline li > div");
+
+        // START
+        window.addEventListener("load", init);
+
+        function init() {
+            setEqualHeights(elH);
+        }
+
+        // SET EQUAL HEIGHTS
+        function setEqualHeights(el) {
+            let counter = 0;
+            for (let i = 0; i < el.length; i++) {
+                const singleHeight = el[i].offsetHeight;
+
+                if (counter < singleHeight) {
+                    counter = singleHeight;
+                }
+            }
+
+            for (let i = 0; i < el.length; i++) {
+                el[i].style.height = `${counter}px`;
+            }
+        }
+
     </script>
 </body>
 
