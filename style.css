@@ -102,21 +102,22 @@ img {
 }
 
 .tales {
-    padding-left: 13vw;
-    padding-right: 13vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .carousel-inner {
-    padding-left: 13vw;
-    padding-right: 13vw;
-    margin: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
 
 }
 
 .px-wide-300 {
-    width: 500px;
+    width: 600px;
 }
 
 .carousel {
     margin: auto;
 }
+
+  
