@@ -283,7 +283,7 @@ img {
     list-style-type: none;
     width: 160px;
     height: 5px;
-    background: var(--white);
+    background: var(--black);
     scroll-snap-align: start;
 }
 
