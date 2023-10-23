@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/TheInnovatio/cardex/blob/main/LICENSE)
  */
 
-@import 'dist/style.css';
+@import 'icons/style.css';
 
 @font-face {
     font-family: Futura;
@@ -41,6 +41,7 @@ img {
     background: -webkit-linear-gradient(82deg, #9ac4e4, #7b59ff);
     -webkit-background-clip: text;
     -webkit-background-size: 400% 400%;
+    background-size: 400% 400%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 14vw;
