@@ -14,13 +14,15 @@
         </svg></button></div>
     <ul
       class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-      <li><router-link exact-active-class="text-blue-400 hover:text-blue-500" class="text-sm text-gray-400 hover:text-gray-500" to="/">Home</router-link></li>
+      <li><router-link exact-active-class="text-blue-400 hover:text-blue-500"
+          class="text-sm text-gray-400 hover:text-gray-500" to="/">Home</router-link></li>
       <li class="text-gray-300"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
           class="w-4 h-4 current-fill" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
         </svg></li>
-      <li> <router-link exact-active-class="text-blue-400 hover:text-blue-500" class="text-sm text-gray-400 hover:text-gray-500" to="/contact">Contact</router-link></li>
+      <li> <router-link exact-active-class="text-blue-400 hover:text-blue-500"
+          class="text-sm text-gray-400 hover:text-gray-500" to="/contact">Contact</router-link></li>
     </ul><!--<a
             class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
             href="#">Sign In</a><a
@@ -44,8 +46,11 @@
           <ul>
             <li class="mb-1">
               <router-link
-               class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
                 to="/">Home</router-link>
+                <router-link
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                to="/contact">Contact</router-link>
             </li>
           </ul>
         </div>
@@ -69,3 +74,75 @@
 <style>
 @import "@/styles/HomeView.css";
 </style>
+<script>
+// Burger menus
+document.addEventListener('DOMContentLoaded', function () {
+  // open
+  const burger = document.querySelectorAll('.navbar-burger');
+  const menu = document.querySelectorAll('.navbar-menu');
+
+  if (burger.length && menu.length) {
+    for (var i = 0; i < burger.length; i++) {
+      burger[i].addEventListener('click', function () {
+        for (var j = 0; j < menu.length; j++) {
+          menu[j].classList.toggle('hidden');
+        }
+      });
+    }
+  }
+
+  // close
+  const close = document.querySelectorAll('.navbar-close');
+  const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+  if (close.length) {
+    for (var w = 0; w < close.length; w++) {
+      close[w].addEventListener('click', function () {
+        for (var j = 0; j < menu.length; j++) {
+          menu[j].classList.toggle('hidden');
+        }
+      });
+    }
+  }
+
+  if (backdrop.length) {
+    for (var y = 0; y < backdrop.length; y++) {
+      backdrop[y].addEventListener('click', function () {
+        for (var z = 0; z < menu.length; z++) {
+          menu[z].classList.toggle('hidden');
+        }
+      });
+    }
+  }
+});
+
+window.onload = function () {
+  document.body.onselectstart = function () {
+    return false;
+  }
+}
+
+const elH = document.querySelectorAll(".timeline li > div");
+
+window.addEventListener("load", init);
+
+function init() {
+  setEqualHeights(elH);
+}
+
+function setEqualHeights(el) {
+  let counter = 0;
+  for (let x = 0; x < el.length; x++) {
+    const singleHeight = el[x].offsetHeight;
+
+    if (counter < singleHeight) {
+      counter = singleHeight;
+    }
+  }
+
+  for (let x = 0; x < el.length; x++) {
+    el[x].style.height = `${counter}px`;
+  }
+}
+
+</script>
