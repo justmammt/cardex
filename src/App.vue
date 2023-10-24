@@ -5,7 +5,7 @@
   </div>
   <nav class="border-bottom shadow-lg relative px-4 py-4 flex justify-between items-center bg-white"><a
       class="text-3xl font-bold leading-none" href="#">
-      <img src="logo/cardex-logo-png.png" class="h-16" unselectable="on">
+      <img src="logo/cardex-logo-png.png" class="h-32 p-0" unselectable="on">
     </a>
     <div class="lg:hidden"><button class="navbar-burger flex items-center text-blue-600 p-3"><svg
           class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
