@@ -3,7 +3,7 @@
     <p class="font-bold">WIP!</p>
     <p class="text-sm">This site is actually a work in progress.</p>
   </div>
-  <nav class="border-bottom shadow-lg relative px-4 py-4 flex justify-between items-center bg-white"><a
+  <nav class="border-bottom shadow-lg relative px-4 py-0 flex justify-between items-center bg-white"><a
       class="text-3xl font-bold leading-none" href="#">
       <img src="logo/cardex-logo-png.png" class="h-32 p-0" unselectable="on">
     </a>
