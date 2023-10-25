@@ -107,4 +107,5 @@
 <style lang="scss" scoped>
 @import "@/assets/fontawesome/css/all.css";
 @import "@/styles/ContactView.scss";
+@import '@/styles/TextDecorationNone.css';
 </style>

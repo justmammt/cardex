@@ -99,4 +99,5 @@ export default {
 </script>
 <style scoped>
 @import "@/styles/HomeView.css";
+@import '@/styles/TextDecorationNone.css';
 </style>
