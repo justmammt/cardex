@@ -33,9 +33,11 @@
               >
               <div class="py-3">
                 <button
-                  class="py-1 px-2 bg-blue-500 hover:bg-blue-600 rounded-xl"
+                  class="py-1 button-transition px-2 bg-blue-500 rounded-xl"
                 >
-                  <a class="button-text-size text-white font-bold"
+                  <a
+                    class="button-text-size text-white font-bold"
+                    href="mailto:justnorganization@justmammtlol.wtf"
                     >justnorganization@justmammtlol.wtf</a
                   >
                 </button>
@@ -43,8 +45,60 @@
             </div>
           </div>
         </div>
-        <div>02</div>
-        <div>03</div>
+        <div
+          class="shadow-hover-animation px-2 hover:shadow-2xl shadow-inner rounded-lg"
+        >
+          <div class="text-center">
+            <div>
+              <i
+                class="fa-solid fa-hashtag sm:py-3 py-2 header-icon"
+              ></i>
+
+              <h1
+                class="font-bold text-center header"
+                style="padding-bottom: 10px"
+              >
+                Social Media
+              </h1>
+              <span class="text-left">You can contact us via social media<br>unfortunately, this isn't available yet.</span>
+              <div class="py-3">
+                <button
+                  class="py-1 button-transition px-2 bg-gray-400 button-disabled rounded-xl"
+                >
+                  <span class="button-text-size text-white font-bold" href=""
+                    >Soon..</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="shadow-hover-animation px-2 hover:shadow-2xl shadow-inner rounded-lg"
+        >
+          <div class="text-center">
+            <div>
+              <i class="fa-brands fa-whatsapp  sm:py-3 py-2 header-icon"></i>
+
+              <h1
+                class="font-bold text-center header"
+                style="padding-bottom: 10px"
+              >
+                WhatsApp
+              </h1>
+              <span class="text-left">You can contact us via WhatsApp<br>unfortunately, this isn't available yet.</span>
+              <div class="py-3">
+                <button
+                  class="py-1 button-transition px-2 bg-gray-400 button-disabled rounded-xl"
+                >
+                  <span class="button-text-size text-white font-bold" href=""
+                    >Soon..</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
