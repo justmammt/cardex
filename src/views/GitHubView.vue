@@ -8,6 +8,14 @@
         <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-500 sm:mt-4">
           There are the infos about the GitHub repositories
         </p>
+       <!--<div class="flex justify-center items-center p-4">
+          <button
+            @click="fetch_info"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            To fetch data, use this button or reload page.
+          </button>
+        </div>--> 
       </div>
     </div>
   </div>
@@ -35,17 +43,25 @@
           >
         </li>
         <li>
-          <span> <i class="fa-solid fa-at" style="padding-right: 5px;"></i>
-          <img  class="rounded-full  h-6 w-6 inline" id="LatestCommitAuthorIMG" src="" />
-          <span style="padding-left: 5px;" id="latestCommitDevAuthor" class="text-gray-700"></span>
-          <a
-            href=""
-            id="latestCommitDevAuthorHref"
-            class="px-2 text-decoration-none"
-            
-            name="sha-write"
-            >- link</a
-          >
+          <span>
+            <i class="fa-solid fa-at" style="padding-right: 5px"></i>
+            <img
+              class="rounded-full h-6 w-6 inline"
+              id="LatestCommitAuthorIMG"
+              src=""
+            />
+            <span
+              style="padding-left: 5px"
+              id="latestCommitDevAuthor"
+              class="text-gray-700"
+            ></span>
+            <a
+              href=""
+              id="latestCommitDevAuthorHref"
+              class="px-2 text-decoration-none"
+              name="sha-write"
+              >- link</a
+            >
           </span>
         </li>
       </ul>
@@ -72,56 +88,65 @@
 </style>
 
 <script scoped>
-const { Octokit } = require("@octokit/rest");
-const octokit = new Octokit();
+export default {
+  methods: {
+    fetch_info: function () {
+      const { Octokit } = require("@octokit/rest");
+      const octokit = new Octokit();
+      async function latest_commit_dev() {
+        const promise_dev = new Promise((resolve, _reject) => {
+          resolve(
+            octokit.rest.repos.getCommit({
+              owner: "justmammt",
+              repo: "cardex",
+              ref: "dev",
+            })
+          );
+          _reject("error");
+        });
 
-document.addEventListener("DOMContentLoaded", () => {
-  async function latest_commit_dev() {
-    const promise_dev = new Promise((resolve, _reject) => {
-      resolve(
-        octokit.rest.repos.getCommit({
-          owner: "justmammt",
-          repo: "cardex",
-          ref: "dev",
-        })
-      );
-      _reject("error");
-    });
+        await promise_dev.then((value) => {
+          var sha = value.data.sha.slice(0, 7);
 
-    await promise_dev.then((value) => {
-      var sha = value.data.sha.slice(0, 7);
+          document.getElementById("latestCommitDevSha").innerHTML = " " + sha;
+          document.getElementById("latestCommitDevShaHref").href =
+            value.data.html_url;
+          document.getElementById("LatestCommitAuthorIMG").src =
+            value.data.author.avatar_url;
+          document.getElementById("latestCommitDevAuthor").innerHTML =
+            value.data.commit.author.name;
+          document.getElementById("latestCommitDevAuthorHref").href =
+            value.data.author.html_url;
+          console.log(sha);
+          console.log(value);
+          return value;
+        });
+      }
+      async function latest_commit_prod() {
+        const promise_prod = new Promise((resolve, _reject) => {
+          resolve(
+            octokit.rest.repos.getCommit({
+              owner: "justmammt",
+              repo: "cardex",
+              ref: "dev",
+            })
+          );
+          _reject("error");
+        });
 
-      document.getElementById("latestCommitDevSha").innerHTML = " " + sha;
-      document.getElementById("latestCommitDevShaHref").href =
-        value.data.html_url;
-      document.getElementById("LatestCommitAuthorIMG").src =
-        value.data.author.avatar_url;
-      document.getElementById("latestCommitDevAuthor").innerHTML =
-        value.data.commit.author.name;
-      document.getElementById("latestCommitDevAuthorHref").href =
-        value.data.author.html_url;
-      console.log(sha);
-      console.log(value);
-    });
+        await promise_prod.then((value) => {
+          // document.getElementById("latestCommitDevSha").innerHTML = value;
+          console.log(value);
+        });
+      }
+
+      latest_commit_dev();
+      latest_commit_prod();
+    },
+
+  },
+  mounted() {
+    this.fetch_info();
   }
-  async function latest_commit_prod() {
-    const promise_prod = new Promise((resolve, _reject) => {
-      resolve(
-        octokit.rest.repos.getCommit({
-          owner: "justmammt",
-          repo: "cardex",
-          ref: "dev",
-        })
-      );
-      _reject("error");
-    });
-
-    await promise_prod.then((value) => {
-      // document.getElementById("latestCommitDevSha").innerHTML = value;
-      console.log(value);
-    });
-  }
-  latest_commit_dev();
-  latest_commit_prod();
-});
+};
 </script>
