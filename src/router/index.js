@@ -5,6 +5,7 @@ import NotFoundView from "../components/NotFoundPage.vue";
 import GitHubView from "../views/GitHubView.vue";
 
 const routes = [
+  
   {
     path: "/",
     name: "home",
@@ -30,6 +31,8 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
+  linkActiveClass: 'router-active',
+  linkExactActiveClass: 'router-exact-active',
   routes,
 });
 

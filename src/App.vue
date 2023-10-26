@@ -87,7 +87,8 @@
     </ul>
     <button
       @click="login"
-      class="hidden text-decoration-none lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-blue-50 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
+      style="cursor: not-allowed"
+      class="hidden text-decoration-none lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-300 hover:bg-gray-300 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
     >
       Sign In</button
     ><!--<a
@@ -144,7 +145,8 @@
           <div class="pt-6">
             <button
               @click="login"
-              class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+              style="cursor: not-allowed"
+              class="block px-4 cursor-blocked py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-300 hover:bg-gray-300 rounded-xl"
             >
               Sign in
             </button>
@@ -178,9 +180,24 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 @import "@/styles/HomeView.css";
 @import "@/styles/TextDecorationNone.css";
+
+@mixin textDecorationNone {
+    text-decoration: none;
+}
+a, button {
+  @include textDecorationNone();
+}
+.router-active,
+.router-exact-active {
+  color: rgb(96, 165, 250);
+  &:hover {
+    color: rgb(59, 130, 246);
+  }
+}
+
 .footer {
   position: fixed;
   bottom: 0;
