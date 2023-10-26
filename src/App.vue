@@ -7,7 +7,7 @@
     <p class="text-sm">This site is actually a work in progress.</p>
   </div>
   <nav
-    class=" border-bottom shadow-lg relative px-4 py-0 flex justify-between items-center bg-white"
+    class="border-bottom shadow-lg relative px-4 py-0 flex justify-between items-center bg-white"
   >
     <a class="text-3xl font-bold leading-none" href="#">
       <img src="logo/cardex-logo-png.png" class="h-32 p-0" unselectable="on" />
@@ -85,9 +85,12 @@
         >
       </li>
     </ul>
-    <!--<a
-            class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
-            href="#">Sign In</a><a
+    <button
+      @click="login"
+      class="hidden text-decoration-none lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-blue-50 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
+    >
+      Sign In</button
+    ><!--<a
             class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
             href="#">Sign up</a>-->
     <div class="navbar-menu relative z-50 hidden">
@@ -137,17 +140,21 @@
             </li>
           </ul>
         </div>
-        <!--  <div class="mt-auto">
-                    <div class="pt-6">
-                        <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
-                            href="#">Sign in</a>
-                        <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
-                            href="#">Sign Up</a>
-                    </div>
-                    <p class="my-4 text-xs text-center text-gray-400">
-                        <span>Copyright © 2021</span>
-                    </p>
-                </div>-->
+        <div class="mt-auto">
+          <div class="pt-6">
+            <button
+              @click="login"
+              class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+            >
+              Sign in
+            </button>
+            <!--<a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
+                            href="#">Sign Up</a>-->
+          </div>
+          <p class="my-4 text-xs text-center text-gray-400">
+            <span>Copyright © 2023 CarDex</span>
+          </p>
+        </div>
       </nav>
     </div>
   </nav>
@@ -173,17 +180,30 @@
 
 <style scoped>
 @import "@/styles/HomeView.css";
-@import '@/styles/TextDecorationNone.css';
+@import "@/styles/TextDecorationNone.css";
 .footer {
   position: fixed;
-   bottom: 0;
-   width: 100%;
-   height: 70px;
-
+  bottom: 0;
+  width: 100%;
+  height: 70px;
 }
 </style>
 
 <script>
+/*
+import  { useAuth0 } from "@auth0/auth0-vue";
+
+export default {
+  setup() {
+    const { loginWithRedirect } = useAuth0();
+
+    return {
+      login: function()  {
+        loginWithRedirect();
+      },
+    };
+  },
+};*/
 
 // Burger menus
 document.addEventListener("DOMContentLoaded", function () {
