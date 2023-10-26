@@ -9,11 +9,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@auth0/auth0-vue": "^2.3.1",
     "@octokit/rest": "^20.0.2",
     "core-js": "^3.8.3",
+    "crypto": "^1.0.1",
     "dotenv": "^16.3.1",
     "fortawesome": "^0.0.1-security",
     "octokit": "^3.1.1",
+    "os": "^0.1.2",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
