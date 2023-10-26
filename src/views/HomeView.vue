@@ -1,40 +1,80 @@
 <template>
-  
   <div class="relative">
-    <h1 class="gradient-text text-center p-8">
-      CarDex
-    </h1>
+    <h1 class="gradient-text text-center p-8">CarDex</h1>
   </div>
-  <div id="carouselFade" class=" carousel-mx-auto carousel slide px-wide-300 p-16" data-ride="carousel">
+  <div
+    id="carouselFade"
+    class="carousel-mx-auto carousel slide px-wide-300 p-16"
+    data-ride="carousel"
+  >
     <div class="carousel-inner carousel-mx-auto">
-      <div class="carousel-item active ">
-        <img src="@/styles/car-logos/alfa-romeo.svg" class="d-block" data-interval="3000">
-      </div>
-      <div class="carousel-item ">
-        <img src="@/styles/car-logos/bmw.svg" class="d-block" data-interval="3000">
-      </div>
-      <div class="carousel-item">
-        <img src="@/styles/car-logos/fiat.svg" class="d-block" data-interval="3000" alt="...">
+      <div class="carousel-item active">
+        <img
+          src="@/styles/car-logos/alfa-romeo.svg"
+          class="d-block"
+          data-interval="3000"
+        />
       </div>
       <div class="carousel-item">
-        <img src="@/styles/car-logos/lamborghini.svg" class="d-block" alt="..." data-interval="3000">
+        <img
+          src="@/styles/car-logos/bmw.svg"
+          class="d-block"
+          data-interval="3000"
+        />
       </div>
       <div class="carousel-item">
-        <img src="@/styles/car-logos/mitsubishi.svg" class="d-block0" alt="..." data-interval="3000">
-      </div>
-      <div class="carousel-item ">
-        <img src="@/styles/car-logos/nissan.svg" class="d-block" data-interval="3000">
-      </div>
-      <div class="carousel-item ">
-        <img src="@/styles/car-logos/suzuki.svg" class="d-block" data-interval="3000">
+        <img
+          src="@/styles/car-logos/fiat.svg"
+          class="d-block"
+          data-interval="3000"
+          alt="..."
+        />
       </div>
       <div class="carousel-item">
-        <img src="@/styles/car-logos/tesla.svg" class="d-block" alt="..." data-interval="3000">
+        <img
+          src="@/styles/car-logos/lamborghini.svg"
+          class="d-block"
+          alt="..."
+          data-interval="3000"
+        />
       </div>
-      <div class="carousel-item ">
-        <img src="@/styles/car-logos/toyota.svg" class="d-block" data-interval="3000">
+      <div class="carousel-item">
+        <img
+          src="@/styles/car-logos/mitsubishi.svg"
+          class="d-block0"
+          alt="..."
+          data-interval="3000"
+        />
       </div>
-
+      <div class="carousel-item">
+        <img
+          src="@/styles/car-logos/nissan.svg"
+          class="d-block"
+          data-interval="3000"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="@/styles/car-logos/suzuki.svg"
+          class="d-block"
+          data-interval="3000"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="@/styles/car-logos/tesla.svg"
+          class="d-block"
+          alt="..."
+          data-interval="3000"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="@/styles/car-logos/toyota.svg"
+          class="d-block"
+          data-interval="3000"
+        />
+      </div>
     </div>
     <!-- <button class="carousel-control-prev" type="button" data-target="#carouselExampleFade" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -46,7 +86,11 @@
         </button>-->
   </div>
 
- <!-- <div class="timeline-root">
+  <!-- Timeline -->
+
+  
+
+  <!-- <div class="timeline-root">
     <section class="section intro">
 
     </section>
@@ -99,5 +143,5 @@ export default {
 </script>
 <style scoped>
 @import "@/styles/HomeView.css";
-@import '@/styles/TextDecorationNone.css';
+@import "@/styles/TextDecorationNone.css";
 </style>
