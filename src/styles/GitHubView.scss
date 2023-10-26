@@ -1,0 +1,31 @@
+$icon-size: 4;
+$icon-color: #6281b7;
+
+* {
+  transition: all 2s ease 0.3s;
+}
+
+a  {
+transition: color 0.5s ease;
+}
+
+@mixin border-and-shadow($width) {
+  /* box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); */
+  border: $width solid rgb(208, 208, 208);
+  box-shadow: 0 12.5px 25px -6px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-hover-animation {
+  @include border-and-shadow(0.2px);
+  transition: box-shadow 2s ease 0.3s;
+}
+
+@mixin shadow-bold {
+  box-shadow: 0px 17.5px 34px -13px $icon-color;
+}
+
+.shadow-hover-animation:hover {
+  @include shadow-bold();
+}
+
+

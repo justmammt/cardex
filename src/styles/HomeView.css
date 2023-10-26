@@ -7,7 +7,7 @@
 @import 'icons/style.css';
 
 @font-face {
-    font-family: Futura;
+    font-family: Futura, Arial, Helvetica, sans-serif, Roboto;
     src: local('Futura Std');
 }
 

@@ -1,0 +1,59 @@
+$icon-size: 4;
+$icon-color: #6281b7;
+@use "scss:math";
+
+
+* {
+  transition: all 2s ease 0.3s;
+}
+
+@mixin border-and-shadow($width) {
+  /* box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); */
+  border: $width solid rgb(208, 208, 208);
+  box-shadow: 0 12.5px 25px -6px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-hover-animation {
+  @include border-and-shadow(0.2px);
+  transition: box-shadow 2s ease 0.3s;
+}
+@mixin shadow-bold {
+  box-shadow: 0px 17.5px 34px -13px $icon-color;
+}
+
+.shadow-hover-animation:hover {
+  @include shadow-bold();
+}
+
+.align-left {
+  text-align: left;
+}
+
+.header {
+  font-size: 2rem;
+}
+
+.header-icon {
+  font-size: $icon-size + rem;
+  color: $icon-color;
+  @media screen and (max-width: 767px) {
+    $icon-size-small: $icon-size - 1;
+    font-size: $icon-size-small + rem;
+  }
+}
+
+.button-text-size {
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+.button {
+  &-transition:hover {
+    $icon-color: #000;
+    box-shadow: 0px 7px 13px -8px $icon-color;
+    transition: all 0.8s ease 0.05s;
+  }
+  &-disabled {
+    cursor: not-allowed;
+  }
+}
