@@ -226,11 +226,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-window.onload = function () {
+/* window.onload = function () {
   document.body.onselectstart = function () {
     return false;
   };
-};
+};*/
 
 const elH = document.querySelectorAll(".timeline li > div");
 
