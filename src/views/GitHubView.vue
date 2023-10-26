@@ -33,7 +33,7 @@
     </div>
   </div>
   <div
-    class="px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4"
+    class="px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-8"
   >
     <div class="shadow-hover-animation bg-white rounded-lg p-4">
       <h3 class="text-2xl font-bold mb-2">
@@ -204,6 +204,9 @@
         </li>
       </ul>
     </div>
+  </div>
+  <div class="py-4 mb-8">
+    <span ></span>
   </div>
 </template>
 
