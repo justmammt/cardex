@@ -84,7 +84,8 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </button>-->
-  </div> -->
+  </div> 
+</div>
 
   <!-- Timeline -->
 
