@@ -83,9 +83,8 @@
         <button class="carousel-control-next" type="button" data-target="#carouselExampleFade" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-        </button>-->
-  </div> 
-</div>
+        </button>
+  </div> -->
 
   <!-- Timeline -->
 
