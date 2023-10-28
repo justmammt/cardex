@@ -2,7 +2,7 @@
   <div class="relative">
     <h1 class="gradient-text text-center p-8">CarDex</h1>
   </div>
-  <div
+<!--  <div
     id="carouselFade"
     class="carousel-mx-auto carousel slide px-wide-300 p-16"
     data-ride="carousel"
@@ -75,7 +75,7 @@
           data-interval="3000"
         />
       </div>
-    </div>
+    </div> -->
     <!-- <button class="carousel-control-prev" type="button" data-target="#carouselExampleFade" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
